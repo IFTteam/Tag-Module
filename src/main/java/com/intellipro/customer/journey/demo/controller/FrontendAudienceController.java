@@ -2,7 +2,7 @@ package com.intellipro.customer.journey.demo.controller;
 
 import com.intellipro.customer.journey.demo.entity.Audience;
 import com.intellipro.customer.journey.demo.error.UserNotFoundException;
-import com.intellipro.customer.journey.demo.service.AudienceService;
+import com.intellipro.customer.journey.demo.service.FrontendAudienceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,12 +12,12 @@ import java.util.List;
 public class FrontendAudienceController {
 
     @Autowired
-    private AudienceService audienceService;
+    private FrontendAudienceService frontendAudienceService;
 
     // Task 1, input is user_id, change return to Audience object
     @GetMapping("/audience/{id}")
     public List<Audience> getAudienceAndTagByUser(@PathVariable("id") Long userId) throws UserNotFoundException {
-        return audienceService.getAudienceAndTagByUser(userId);
+        return frontendAudienceService.getAudienceAndTagByUser(userId);
     }
 
 

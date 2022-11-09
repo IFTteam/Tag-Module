@@ -5,7 +5,6 @@ import com.intellipro.customer.journey.demo.entity.Journey;
 import com.intellipro.customer.journey.demo.entity.Tag;
 import com.intellipro.customer.journey.demo.entity.User;
 import com.intellipro.customer.journey.demo.error.AudienceNotFoundException;
-import com.intellipro.customer.journey.demo.error.JourneyNotFoundException;
 import com.intellipro.customer.journey.demo.error.UserNotFoundException;
 import com.intellipro.customer.journey.demo.repository.AudienceRepository;
 import com.intellipro.customer.journey.demo.repository.JourneyRepository;
@@ -19,7 +18,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TagServiceImpl implements TagService{
+public class FrontendTagServiceImpl implements FrontendTagService {
     @Autowired
     private TagRepository tagRepository;
 

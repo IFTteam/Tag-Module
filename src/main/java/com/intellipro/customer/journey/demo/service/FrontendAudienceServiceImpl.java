@@ -12,13 +12,11 @@ import com.intellipro.customer.journey.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
-public class AudienceServiceImpl implements AudienceService{
+public class FrontendAudienceServiceImpl implements FrontendAudienceService {
     @Autowired
     private AudienceRepository audienceRepository;
     @Autowired

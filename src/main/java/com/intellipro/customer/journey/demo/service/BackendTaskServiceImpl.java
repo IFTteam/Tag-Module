@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TaskServiceImpl implements TaskService{
+public class BackendTaskServiceImpl implements BackendTaskService {
 
     @Autowired
     private AudienceRepository audienceRepository;

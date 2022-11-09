@@ -6,7 +6,7 @@ import com.intellipro.customer.journey.demo.error.UserNotFoundException;
 
 import java.util.List;
 
-public interface TagService {
+public interface FrontendTagService {
     List<Tag> getDistinctTagByUser(Long userId) throws UserNotFoundException;
 
     Tag saveTagWithUserAndJourney(long userId, long journeyId, Tag tag);
