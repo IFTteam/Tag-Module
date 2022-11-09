@@ -4,13 +4,12 @@ import com.intellipro.customer.journey.demo.entity.CoreModuleTask;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class ApiController {
+public class TagModuleController {
     @Autowired
-    private TaskController taskController;
+    private BackendTaskController backendTaskController;
 
     @PostMapping("/API_trigger")
     public CoreModuleTask redirect(@RequestBody CoreModuleTask task) {
@@ -28,7 +27,7 @@ public class ApiController {
 //            substr = json_text.substring(i + find.length() + 3, json_text.length() - 1);
 //            Long tagId =  Long.parseLong(substr);
 
-            return taskController.createRelationBetweenAudienceAndTag(task);
+            return backendTaskController.createRelationBetweenAudienceAndTag(task);
         }
         return nullTask;
     }

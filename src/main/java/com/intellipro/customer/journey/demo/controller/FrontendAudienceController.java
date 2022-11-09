@@ -1,22 +1,15 @@
 package com.intellipro.customer.journey.demo.controller;
 
 import com.intellipro.customer.journey.demo.entity.Audience;
-import com.intellipro.customer.journey.demo.entity.Tag;
-import com.intellipro.customer.journey.demo.entity.User;
-import com.intellipro.customer.journey.demo.error.AudienceNotFoundException;
-import com.intellipro.customer.journey.demo.error.TagNotFoundException;
 import com.intellipro.customer.journey.demo.error.UserNotFoundException;
 import com.intellipro.customer.journey.demo.service.AudienceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
-public class AudienceController {
+public class FrontendAudienceController {
 
     @Autowired
     private AudienceService audienceService;
